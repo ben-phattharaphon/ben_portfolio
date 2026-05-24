@@ -18,7 +18,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   );
 }
 
-export const metadata = {
+export const metadata: Metadata = {
   title: "Ben Phattharaphon",
   icons: {
     icon: "/bb.jpg",
