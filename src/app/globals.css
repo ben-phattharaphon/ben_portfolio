@@ -1,0 +1,332 @@
+@import "tailwindcss";
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
+}
+
+/* XP Wallpaper Background */
+.video-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  pointer-events: none;
+}
+
+body {
+  background-color: #000;
+}
+
+/* Custom Utilities for XP Desktop */
+.desktop-icon-grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 20px;
+  padding: 20px;
+  height: calc(100vh - 30px);
+  /* Leave room for taskbar */
+}
+
+.xp-icon {
+  width: 74px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.xp-icon:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+}
+
+.xp-icon.selected {
+  /* No background here, handled by inline styles for label/icon */
+}
+
+.xp-icon-text {
+  font-size: 11px;
+  color: white;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+  margin-top: 4px;
+  text-align: center;
+  user-select: none;
+}
+
+/* Custom Scrollbar for IE6 Windows */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 16px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #ECE9D8;
+  border-left: 1px solid #D4D0C8;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #C0C0C0;
+  border: 1px solid #ECE9D8;
+  border-top-color: #FFFFFF;
+  border-left-color: #FFFFFF;
+  border-bottom-color: #808080;
+  border-right-color: #808080;
+}
+
+.custom-scrollbar::-webkit-scrollbar-button {
+  background: #ECE9D8;
+  border: 1px solid #ECE9D8;
+  border-top-color: #FFFFFF;
+  border-left-color: #FFFFFF;
+  border-bottom-color: #808080;
+  border-right-color: #808080;
+  height: 16px;
+  display: block;
+}
+
+/* Make sure dragging doesn't highlight text for icons specifically */
+.xp-icon,
+.title-bar {
+  user-select: none;
+}
+
+/* CRT / Scanline Effect Overlay */
+.crt-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+      rgba(0, 0, 0, 0.1) 50%),
+    linear-gradient(90deg,
+      rgba(255, 0, 0, 0.03),
+      rgba(0, 255, 0, 0.01),
+      rgba(0, 0, 255, 0.03));
+  background-size: 100% 3px, 3px 100%;
+  pointer-events: none;
+  z-index: 10000;
+}
+
+/* Subtle Flicker */
+@keyframes flicker {
+  0% {
+    opacity: 0.97;
+  }
+
+  5% {
+    opacity: 0.95;
+  }
+
+  10% {
+    opacity: 0.9;
+  }
+
+  15% {
+    opacity: 0.98;
+  }
+
+  20% {
+    opacity: 0.95;
+  }
+
+  25% {
+    opacity: 0.98;
+  }
+
+  30% {
+    opacity: 0.95;
+  }
+
+  100% {
+    opacity: 0.98;
+  }
+}
+
+.crt-flicker {
+  animation: flicker 0.15s infinite;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(18, 16, 16, 0.03);
+  pointer-events: none;
+  z-index: 10001;
+}
+
+/* Login Screen Styles */
+.login-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #5a7edc;
+  display: flex;
+  flex-direction: column;
+  z-index: 9999;
+  font-family: Tahoma, "Segoe UI", Geneva, Verdana, sans-serif;
+  color: white;
+}
+
+.login-top,
+.login-bottom {
+  height: 100px;
+  background: linear-gradient(to bottom, #003399 0%, #0055e5 10%, #0055e5 90%, #003399 100%);
+  border-top: 2px solid #003399;
+  border-bottom: 2px solid #003399;
+  display: flex;
+  align-items: center;
+  padding: 0 40px;
+}
+
+.login-top {
+  border-top: none;
+}
+
+.login-bottom {
+  border-bottom: none;
+  margin-top: auto;
+  justify-content: space-between;
+}
+
+.login-middle {
+  flex: 1;
+  display: flex;
+  background: linear-gradient(to bottom, #5a7edc 0%, #4a6edc 50%, #5a7edc 100%);
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.login-middle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+}
+
+.login-middle::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.3) 50%, transparent 100%);
+}
+
+.login-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding-right: 40px;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.login-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 40px;
+}
+
+.user-card {
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+  width: 250px;
+  border: 1px solid transparent;
+}
+
+.user-card:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.user-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  margin-right: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.user-name {
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.user-status {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+@keyframes progress {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  100% {
+    transform: translateX(400%);
+  }
+}
+
+.turn-off-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+.turn-off-icon {
+  width: 24px;
+  height: 24px;
+  background: red;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 12px;
+  border: 1px solid #fff;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+button:focus,
+button:focus-visible {
+  outline: none;
+}
