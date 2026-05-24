@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-export const metadata: Metadata = {
-  title: "BEN \u2014 Pixel Architect & Creative Developer",
-  description: "Portfolio of BEN",
-};
+// export const metadata: Metadata = {
+//   title: "BEN \u2014 Pixel Architect & Creative Developer",
+//   description: "Portfolio of BEN",
+// };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
