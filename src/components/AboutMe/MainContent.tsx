@@ -47,7 +47,7 @@ export function MainContent() {
               aria-label="Rugby Player"
               style={{ textShadow: "none" }}
             >
-              🏉
+              🌞
             </span>
           </div>
           <p className="text-[14px] leading-relaxed font-[Arial] tracking-wide">
@@ -64,7 +64,7 @@ export function MainContent() {
               aria-label="Thumbs up"
               style={{ textShadow: "none" }}
             >
-              👍
+              🥳
             </span>
           </div>
           <p className="text-[14px] leading-relaxed font-[Arial] tracking-wide">
@@ -81,7 +81,7 @@ export function MainContent() {
               aria-label="Suit Man"
               style={{ textShadow: "none" }}
             >
-              👔
+              📁
             </span>
           </div>
           <p className="text-[14px] leading-relaxed font-[Arial] tracking-wide">
