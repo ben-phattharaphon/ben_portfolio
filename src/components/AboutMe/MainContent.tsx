@@ -34,14 +34,7 @@ export function MainContent() {
             </span>
           </div>
           <p className="text-[14px] leading-relaxed font-[Arial] tracking-wide">
-            I'm Phattharaphon, a designer based in Bangkok, Thailand. Originally from
-            New Zealand, I attended Brisbane Boys' College before committing to
-            design in my late twenties. I completed a Diploma of Graphic Design
-            at Queensland TAFE and from there started freelancing in graphic
-            design and video production. More recently that's extended into web
-            design and front-end development. I'm drawn to interactive and
-            immersive work, and I tend to invest heavily in whatever I'm
-            building rather than rushing to get it out the door.
+            I'm Phattharaphon Saengphak, a full-stack developer based in Bangkok, Thailand. My path here wasn't exactly conventional — I spent years working as a Mining Geologist in Zambia, conducting fieldwork, mapping terrain, and calculating mineral reserves. That kind of work teaches you to be systematic, precise, and comfortable with ambiguity. Turns out those same qualities matter a lot in software development.
           </p>
         </div>
 
@@ -58,14 +51,7 @@ export function MainContent() {
             </span>
           </div>
           <p className="text-[14px] leading-relaxed font-[Arial] tracking-wide">
-            Growing up in New Zealand, my interest in design grew alongside
-            rugby. Playing and watching the All Blacks, I was drawn to the visual
-            identity around the sport. The haka, the silver fern, the way an
-            entire country's identity could be distilled into a jersey or a
-            pre-match sequence. That was where I first understood the impact
-            good design could have. Not just catching attention but making
-            people feel something. It stuck with me, and it still shapes how I
-            approach everything I work on.
+            I made the shift into tech deliberately, diving into a full-stack bootcamp and building real products from the ground up. I work across the whole stack — React, Next.js, Node.js, Express, TypeScript, Prisma — and I genuinely enjoy both sides. I care as much about how something feels to use as how it's built under the hood.
           </p>
         </div>
 
@@ -82,13 +68,7 @@ export function MainContent() {
             </span>
           </div>
           <p className="text-[14px] leading-relaxed font-[Arial] tracking-wide">
-            I've always been as interested in how things are built as how they
-            look. That pulled me deeper into web development over time, where I
-            found I could bring the same design thinking to interactive
-            experiences. It felt like a natural extension of the work I was
-            already doing. Most of what I build now is in that space, pushing
-            what's possible in the browser and treating the web as its own
-            medium rather than somewhere to park content.
+            The projects I'm most proud of reflect that. I built a social platform for connecting people through shared activities, with real-time group chat, location-based discovery, and a matching system built around niche interests. I also built an e-commerce app for natural energy crystals — complete with birth month compatibility filtering, which was a fun design challenge.
           </p>
         </div>
 
@@ -105,14 +85,7 @@ export function MainContent() {
             </span>
           </div>
           <p className="text-[14px] leading-relaxed font-[Arial] tracking-wide">
-            Rugby taught me more than discipline and resilience. It taught me
-            what it means to hold a standard, to care about process as much as
-            the result. Showing up with intent even when no one is watching.
-            That carried straight into design. I'm detail-oriented to a fault,
-            and I'd rather put out fewer things done properly than rush through
-            a lot of things done poorly. Everything I make gets that same level
-            of attention regardless of whether it's a paid job or a personal
-            project.
+            I'm drawn to work that has a clear purpose and leaves people with something useful. Whether it's a clean API or an interface that just makes sense, I'd rather spend more time getting it right than ship something I'm not proud of.
           </p>
         </div>
       </div>
