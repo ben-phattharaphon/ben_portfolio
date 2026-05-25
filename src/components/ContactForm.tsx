@@ -140,7 +140,7 @@ export default function ContactForm() {
         <div className="mt-4 flex items-center justify-between border-t border-[#D4D0C8] pt-2">
           <div className="flex gap-6">
             <a
-              href="https://linkedin.com/in/yourprofile"
+              href="https://www.linkedin.com/in/phattharaphon-saengphak-70b210338"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1 hover:underline text-[#003399]"
