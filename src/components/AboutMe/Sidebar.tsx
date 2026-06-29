@@ -73,6 +73,7 @@ export function Sidebar() {
       <SidebarBox title="Languages">
         <SkillItem name="JavaScript" logoSlug="javascript" />
         <SkillItem name="TypeScript" logoSlug="typescript" />
+        <SkillItem name="Dart" logoSlug="dart" />
         <SkillItem name="HTML5" logoSlug="html5" />
         <SkillItem name="CSS3" iconUrl="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJDwBd9LoQzBAZigXXxzQ0kKn6TwyrE0Y7Rg&s" />
       </SidebarBox>
@@ -86,6 +87,7 @@ export function Sidebar() {
         <SkillItem name="Express.js" logoSlug="express" />
         <SkillItem name="Vue.js" logoSlug="vuedotjs" />
         <SkillItem name="Angular" logoSlug="angular" />
+        <SkillItem name="Flutter" logoSlug="flutter" />
         <SkillItem name="TailwindCSS" logoSlug="tailwindcss" />
         <SkillItem name="Zustand" color="#433929" />
         <SkillItem name="Socket.io" logoSlug="socketdotio" />
